@@ -67,7 +67,7 @@ oturum("locale",$_GET['l']);
 <body>
 	<!-- NAVBAR -->
 	
-	@include("layouts.navbar")
+	@include("layouts.navbar2")
 	<!-- SECTION LABEL -->
 	<div id="top"></div>
 

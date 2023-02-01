@@ -4,12 +4,27 @@
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
-        <p class="small"><i class="bx bx-envelope"></i> info@gaziantepteknopark.com.tr | <i class="bx bx-phone"></i> +90(342) 361 01 18
+        <p class="small"><i class="bx bx-envelope"></i> info@gaziantepteknopark.com.tr
+         | <i class="bx bx-phone"></i> +90(342) 361 01 18
+         | <a href="{{url("admin")}}">Yönetim Paneli</a>
         
       </div>
 
       <div class="col-12 col-md-6 text-right">
-        <p class="small">Free shipping on total of $99 of all products
+        <p class="small">
+          <a href="https://www.instagram.com/gaziantepteknopark/" target="_blank" class="link">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/gantepteknopark" target="_blank" class="link">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/gaziantepteknopark/" target="_blank" class="link">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/GantepTeknopark" target="_blank" class="link">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </p>
       </div>
     </div>
   </div>
@@ -19,7 +34,7 @@
   <div class="container">
 
     <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
-                <i class="bx bx-menu icon-single"></i>
+                <i class="fa fa-bars icon-single"></i>
             </button>
 
     <a class="navbar-brand" href="#">
@@ -34,15 +49,15 @@
     
 
     <div class="collapse navbar-collapse">
-      <form class="form-inline my-2 my-lg-0 mx-auto">
-        <input class="form-control" type="search" placeholder="Firma Ara..." aria-label="Search">
-        <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+      <form class="form-inline my-2 my-lg-0 mx-auto" method="GET" action="firma-rehberi">
+        <input class="form-control" name="q" value="{{get("q")}}" type="search" placeholder="Firma Ara..." aria-label="Search">
+        <button class="btn btn-danger my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
       </form>
 
       <ul class="navbar-nav">
       
         <li class="nav-item ml-md-3">
-          <a class="btn btn-primary" href="#"><i class="bx bxs-user-circle mr-1"></i> Hemen Başvur</a>
+          <a class="btn btn-primary" href="https://portal.gaziantepteknopark.com.tr/Login/ApplicationUserSignUp"><i class="bx bxs-user-circle mr-1"></i> Hemen Başvur</a>
         </li>
       </ul>
     </div>
@@ -54,7 +69,7 @@
 
 <nav class="navbar navbar-expand-md navbar-light lacivert sub-menu">
   <div class="container">
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse lacivert" id="navbar">
       <ul class="navbar-nav mx-auto">
       <li class="nav-item">
 						<a class="nav-link" href="./">
@@ -123,7 +138,7 @@
       <div class="col-12">
         <form class="form-inline mb-3 mx-auto">
           <input class="form-control" type="search" placeholder="Firma Ara..." aria-label="Search">
-          <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+          <button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
     </div>
@@ -136,12 +151,12 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-10 pl-0">
-          <a class="btn btn-primary" href="#"><i class="bx bxs-user-circle mr-1"></i> Hemen Başvur</a>
+          <a class="btn btn-primary" href="https://portal.gaziantepteknopark.com.tr/Login/ApplicationUserSignUp"><i class="bx bxs-user-circle mr-1"></i> Hemen Başvur</a>
         </div>
 
         <div class="col-2 text-left">
           <button type="button" id="sidebarCollapseX" class="btn btn-link">
-                            <i class="bx bx-x icon-single"></i>
+                            <i class="fa fa-times icon-single"></i>
                         </button>
         </div>
       </div>
@@ -149,65 +164,55 @@
   </div>
 
   <ul class="list-unstyled components links">
-    <li class="active">
-      <a href="#"><i class="bx bx-home mr-3"></i> Home</a>
-    </li>
-    <li>
-      <a href="#"><i class="bx bx-carousel mr-3"></i> Products</a>
-    </li>
-    <li>
-      <a href="#"><i class="bx bx-book-open mr-3"></i> Schools</a>
-    </li>
-    <li>
-      <a href="#"><i class="bx bx-crown mr-3"></i> Publishers</a>
-    </li>
-    <li>
-      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="bx bx-help-circle mr-3"></i>
-                    Support</a>
-      <ul class="collapse list-unstyled" id="pageSubmenu">
-        <li>
-          <a href="#">Delivery Information</a>
-        </li>
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="#">Terms & Conditions</a>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="#"><i class="bx bx-phone mr-3"></i> Contact</a>
-    </li>
+  <li class="nav-item">
+						<a class="nav-link" href="./">
+							{{e2("Anasayfa")}}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="kurumsal">
+							{{e2("Kurumsal")}}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="firma-rehberi">
+							{{e2("Firma Rehberi")}}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="duyurular">
+							{{e2("Duyurular")}}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="tesvikler">
+							{{e2("Teşvikler")}}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="kariyer">
+							{{e2("Kariyer")}}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="iletisim">
+							{{e2("İletişim")}}
+						</a>
+					</li>
+					<li class="nav-item show-mobile">
+						<a class="nav-link" href="https://portal.gaziantepteknopark.com.tr">
+							{{e2("Portal Giriş")}}
+						</a>
+						
+					</li>
   </ul>
 
-  <h6 class="text-uppercase mb-1">Categories</h6>
-  <ul class="list-unstyled components mb-3">
-    <li>
-      <a href="#">Category 1</a>
-    </li>
-    <li>
-      <a href="#">Category 1</a>
-    </li>
-    <li>
-      <a href="#">Category 1</a>
-    </li>
-    <li>
-      <a href="#">Category 1</a>
-    </li>
-    <li>
-      <a href="#">Category 1</a>
-    </li>
-    <li>
-      <a href="#">Category 1</a>
-    </li>
-  </ul>
-
+  
   <ul class="social-icons">
-    <li><a href="#" target="_blank" title=""><i class="bx bxl-facebook-square"></i></a></li>
-    <li><a href="#" target="_blank" title=""><i class="bx bxl-twitter"></i></a></li>
-    <li><a href="#" target="_blank" title=""><i class="bx bxl-linkedin"></i></a></li>
-    <li><a href="#" target="_blank" title=""><i class="bx bxl-instagram"></i></a></li>
+    <li><a href="#" target="_blank" title=""><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#" target="_blank" title=""><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#" target="_blank" title=""><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#" target="_blank" title=""><i class="fa fa-instagram"></i></a></li>
   </ul>
 
 </nav>
@@ -237,9 +242,19 @@
 
 </script>
 <style>
+  .btn-link {
+    font-weight: 400;
+    color: #233461;
+    text-decoration: none;
+}
+  .btn-primary {
+    color: #fff;
+    background-color: #27335f;
+    border-color: #27335f;
+}
     .lacivert {
         background-color: #233461!important;
-        padding: 10px !important
+        padding: 0px !important
 
     }
     .lacivert * {
@@ -428,7 +443,7 @@ a[data-toggle="collapse"] {
 }
 
 section {
-  padding: 6rem;
+ /* padding: 6rem; */ 
   background: #e4e4e4;
   margin-bottom: 30px;
   position: relative;
@@ -510,4 +525,11 @@ ul.social-icons li {
   right: 0;
 }
 
+@media screen and (max-width:768px) {
+  .navbar-brand {
+    position:absolute;
+    left: calc(50% - 80px);
+
+  }
+}
 </style>
